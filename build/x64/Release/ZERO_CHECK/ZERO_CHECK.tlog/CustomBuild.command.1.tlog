@@ -1,0 +1,10 @@
+^C:\USERS\ZELUN\DESKTOP\PROJECTS\LOW_LATENCY_LOB\BUILD\CMAKEFILES\A581296D9F1F6C97D4AB5EBB8F99873F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/zelun/Desktop/Projects/low_latency_lob -BC:/Users/zelun/Desktop/Projects/low_latency_lob/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/zelun/Desktop/Projects/low_latency_lob/build/low_latency_lob.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
