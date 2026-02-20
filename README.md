@@ -49,3 +49,22 @@ echo "B 100.05 10" | ./lob_engine --stdin
 ## Notes
 - Prices are parsed as decimal values and converted to integer ticks (cents).
 - Use `--keep-trades` only if you want all trade records retained in memory.
+
+
+## Interactive Frontend Example (React + JavaScript)
+
+A browser-based visual example is included in `frontend/`.
+
+- It provides an interactable input form for limit orders (side, price, qty).
+- It shows resulting output immediately: updated order book and recent trades.
+- Matching behavior mirrors the project logic (price-time priority, FIFO at each price level).
+
+Run locally:
+
+```bash
+cd frontend
+python3 -m http.server 4173
+```
+
+Then open `http://localhost:4173` in your browser.
+
